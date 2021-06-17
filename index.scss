@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  font-size: 18px;
+}
+
+.nav {
+  width: 100%;
+  padding: 22px 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px silver;
+}
+.logo {
+  font-weight: bold;
+}
+.btns {
+  font-weight: bold;
+}
+.btn {
+  font-family: inherit;
+  font-weight: inherit;
+  border: none;
+  padding: 16px 42px;
+  background: transparent;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &-link {
+    padding: 8px 24px;
+    color: #00724c;
+    border-bottom: 2px solid transparent;
+
+    &:hover,
+    &:focus {
+      color: #006241;
+      border-bottom: 2px solid #006241;
+    }
+  }
+}
+.btn-solid {
+  border: 2px solid transparent;
+  background-color: #00724c;
+  color: #fff;
+}
+.btn-solid:hover,
+.btn-solid:focus {
+  background-color: #006241;
+}
+.btn-outline {
+  border: 2px solid transparent;
+}
+.btn-outline:hover,
+.btn-outline:focus {
+  border-color: #006241;
+}
+.btn-white {
+  background-color: #c8c8c8;
+  color: #333;
+  border-bottom: 2px solid transparent;
+
+  &:hover,
+  &:focus {
+    background-color: #a8a8a8;
+  }
+}
+/* Home section */
+.home {
+  min-height: 90vh;
+  padding: 65px 180px;
+  background: #333
+    url(https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGElMjBrbmlmZSUyMGluJTIwYnVyZ2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60)
+    no-repeat center / cover;
+  color: white;
+}
+.home-subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.home-title {
+  font-size: 64px;
+  font-weight: 700;
+  max-width: 12ch;
+  margin-bottom: 12px;
+}
+.home-para {
+  max-width: 50ch;
+  margin-bottom: 24px;
+}
+
+.features {
+  padding: 65px 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px 64px;
+
+  // & > * {
+  // }
+}
+.feature {
+  flex: 1;
+
+  @media only screen and (max-width: 900px) {
+    flex: 0 0 45%;
+  }
+  @media only screen and (max-width: 730px) {
+    flex: 0 0 100%;
+  }
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 48px 25px;
+  color: #fff;
+
+  &-title {
+    max-width: 10ch;
+  }
+
+  &-1 {
+    background-image: url(https://images.unsplash.com/photo-1545196353-e431cf8d0803?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YSUyMGtuaWZlJTIwaW4lMjBidXJnZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+  }
+  &-2 {
+    background-image: url(https://images.unsplash.com/photo-1509546554-06fc480b4a62?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGElMjBrbmlmZSUyMGluJTIwYnVyZ2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+  }
+  &-3 {
+    background-image: url(https://images.unsplash.com/photo-1545196353-e431cf8d0803?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YSUyMGtuaWZlJTIwaW4lMjBidXJnZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+  }
+}
+.marker {
+  background: none;
+  color: #006241;
+}
+
+.foods {
+  margin: 24px 0;
+  padding: 0 32px;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    place-items: center;
+    gap: 32px 10px;
+  }
+}
+.food {
+  width: 100%;
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+  &__footer {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    background: #ededed;
+  }
+  .btn {
+    padding: 2px 0;
+  }
+}
+
+.discounts {
+  margin: 60px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px 55px;
+  padding: 0 50px;
+
+  @media only screen and (max-width: 900px) {
+    flex-wrap: wrap;
+
+    & > * {
+      flex: 0 0 100%;
+    }
+  }
+}
+.discount {
+  width: 100%;
+  padding: 54px 40px;
+
+  &__title {
+    font-size: 48px;
+    color: white;
+    max-width: 10ch;
+
+    @media only screen and (max-width: 900px) {
+      font-size: 36px;
+    }
+    @media only screen and (max-width: 600px) {
+      font-size: 28px;
+    }
+  }
+  &:nth-child(1) {
+    background: url(https://images.unsplash.com/photo-1598511726903-ef08ef6eff94?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGElMjBrbmlmZSUyMGluJTIwYnVyZ2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60)
+      no-repeat center / cover;
+  }
+  &:nth-child(2) {
+    background: url(https://images.unsplash.com/photo-1598511726903-ef08ef6eff94?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGElMjBrbmlmZSUyMGluJTIwYnVyZ2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60)
+      no-repeat center / cover;
+  }
+}
+
+.discount-box {
+  margin: 65px;
+  border: 2px solid #333;
+  padding: 24px 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .discount__title {
+    color: #333;
+    max-width: 15ch;
+  }
+
+  &__image {
+    width: 30%;
+  }
+}
+
+.order-now {
+  margin: 60px;
+
+  &__image {
+    width: 100%;
+  }
+}
+
+// Footer
+.footer {
+  width: 100%;
+
+  &__nav {
+    padding: 25px 108px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00724c;
+    color: #fff;
+  }
+  &__footer {
+    padding: 25px 108px;
+    display: flex;
+    align-items: center;
+    background-color: #00724c;
+    color: #fff;
+  }
+  &__left {
+    grid-area: left;
+    justify-self: center;
+    align-self: center;
+  }
+  &__separator {
+    display: block;
+    width: 2px;
+    margin: 0 10px;
+    height: 20px;
+    background: #c8c8c8;
+  }
+  &__text {
+    font-size: 14px;
+    color: #c8c8c8;
+  }
+
+  &__main {
+    padding: 50px 110px;
+    background-color: #006241;
+    display: grid;
+    gap: 30px;
+    grid-template-areas:
+      "left buy cycle hotel"
+      "left trip contact about";
+
+    @media only screen and (max-width: 900px) {
+      padding: 50px 60px;
+      grid-template-areas:
+        "left buy cycle"
+        "left hotel trip"
+        "left contact about";
+    }
+    @media only screen and (max-width: 600px) {
+      grid-template-areas: "left" "buy" " cycle" "hotel" "trip" "contact" "about";
+      justify-items: center;
+    }
+  }
+  &__social {
+    list-style: none;
+    display: flex;
+    gap: 0 16px;
+    margin: 24px 0;
+  }
+  &__social__link {
+    color: #000;
+    font-size: 30px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #aaa;
+    }
+  }
+}
+.box {
+  &__title {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 18px;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    gap: 10px 0;
+  }
+  &__link {
+    color: #bbb;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: #eee;
+    }
+  }
+}
+.box-buy {
+  grid-area: buy;
+}
+.box-cycle {
+  grid-area: cycle;
+}
+.box-hotel {
+  grid-area: hotel;
+}
+.box-trip {
+  grid-area: trip;
+}
+.box-contact {
+  grid-area: contact;
+}
+.box-about {
+  grid-area: about;
+}
